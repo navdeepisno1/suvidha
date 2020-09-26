@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="style/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="script/script.js"></script>
+<title>Suvidha</title>
+</head>
+
+<body  onMouseMove="transit(event)">
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">SUVIDHA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+		 <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Branch
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">CE</a></li>
+            <li><a href="#">IT</a></li>
+            <li><a href="#">ECE</a></li>
+			<li><a href="#">MECH</a></li>
+			<li><a href="#">EL</a></li>
+			<li><a href="#">EIC</a></li>
+			<li><a href="#">CIVIL</a></li>
+			<li><a href="#">ECS</a></li>
+        </ul>
+      </li>
+        <li><a href="submit.html">Submit</a></li>
+        <li class="active"><a href="about.html">About US</a></li>
+		  <li><a href="#">Gallery</a></li>
+		</ul>
+    </div>
+  </div>
+</nav> 
+	<script>
+	function transit(e)
+{
+	var x = e.pageX;
+	var y = e.pageY;
+	var l1x = x/10;
+	var l1y = y/10;
+	
+	console.log(l1x + " " + l1y);
+	document.getElementById("abI").style.transform = "translateX(calc(-50%+10px)) translateY(-50%)"; 
+}
+	</script>
+	
+	<div class="divBackground" style="perspective: 1000px;">
+		<div class="aboutUS">
+			<div class="aboutUSLayer1">
+			
+			</div>
+			<div class="aboutUSLayer2">
+				
+			</div>
+			<div class="aboutUSLayer3">
+				
+			</div>
+			<img src="images/suvidha.png" class="aboutUSImage" id="abI">
+		</div>
+	</div>
+	
+</body>
+</html>

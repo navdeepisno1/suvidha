@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link href="style/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,7 +11,7 @@
 </head>
 
 <body>
-	 <nav class="navbar navbar-inverse">
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -24,7 +23,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
 		 <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Branch
         <span class="caret"></span></a>
@@ -39,36 +38,43 @@
 			<li><a href="#">ECS</a></li>
         </ul>
       </li>
-        <li><a href="#">Submit</a></li>
-        <li><a href="#">About US</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="about.html">About US</a></li>
+		  <li><a href="#">Gallery</a></li>
 		</ul>
     </div>
   </div>
 </nav> 
 	<div class="divBackground">
-		<img src="images/wall.jpg" style="width: 100%; height: 100%; z-index: -20">
 		<div class="text-responsive"><center>SUVIDHA<br>Dive Into Ocean of Education</center></div>
 		<a href="#cards"><div class="downArrow"></div></a>
 	</div>
 	
-    <div class="container" id="cards">
+	<div class="divList">
+	<div class="container" id="cards">
 		<div class="row" style="margin-top: 35px;">
 			<div class="col-lg-4">
 				<div class="card">
 					CE
-					<div class="button">Goto</div>
+					<a href="branches/CE/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-lg-4">
 			<div class="card">
 					IT
-					<div class="button">Goto</div>
+					<a href="branches/IT/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-lg-4">
 			<div class="card">
 					ECE
-					<div class="button">Goto</div>
+					<a href="branches/ECE/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -76,19 +82,25 @@
 			<div class="col-lg-4">
 				<div class="card">
 					MECH
-					<div class="button">Goto</div>
+					<a href="branches/MECH/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-lg-4">
 			<div class="card">
 					EL
-					<div class="button">Goto</div>
+					<a href="branches/EL/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-lg-4">
 			<div class="card">
 					EIC
-					<div class="button">Goto</div>
+					<a href="branches/EIC/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -96,16 +108,26 @@
 			<div class="col-lg-4">
 				<div class="card">
 					CIVIL
-					<div class="button">Goto</div>
+					<a href="branches/CIVIL/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="card">
 					ECS
-					<div class="button">Goto</div>
+					<a href="branches/ECS/index.html">
+						<div class="button">Goto</div>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="footer">
+	&copy; SUVIDHA
+	</div>
+	</div>
+    
+	
 </body>
 </html>

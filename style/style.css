@@ -49,29 +49,318 @@
 
 .card
 {
+	background: url(../images/tech.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	margin-bottom: 25px;
 	width: 100%;
 	height: 300px;
-	box-shadow: 0 0 10px 2px #333;
-	color: #333;
+	border: 2px solid #333;
+	color: #fff;
 	font-size: 35px;
 	line-height: 250px;
 	text-align: center;
+	transition: all .5s;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.card:hover
+{
+	box-shadow: 0 0 10px 5px #777;
 }
 
 .button
 {
-	color: #fff;
+	color: #333;
 	text-align: center;
 	font-size: 25px;
 	line-height: 50px;
 	position: absolute;
-	width: 92.5%;
+	width: 200px;
 	height: 50px;
-	left: 0;
+	left: 50%;
 	bottom: 0;
-	margin-left: 15px;
+	transform: translateX(-50%);
 	margin-bottom: 25px;
+	background-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	
-	background-color: #333;
 }
+
+.button:after
+{
+	content: '';
+	width: 0;
+	height: 0;
+	border: 5px solid #333;
+	border-color: transparent #333 transparent transparent;
+}
+.button:before
+{
+	content: '';
+	width: 0px;
+	height: 0px;
+	border: 5px solid #333;
+	border-color: transparent transparent transparent #333;
+}
+
+.footer
+{
+	text-align: center;
+	height: 50px;
+	color: #333;
+	width: 100%;
+	line-height: 50px;
+	font-weight: 600;
+	background-color: #ccc;
+}
+.divBackground
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/wall.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.divList
+{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.formDiv
+{
+	position: absolute;
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: appear forwards 1.5s;
+}
+
+@keyframes appear
+{
+	0%
+	{
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
+	50%
+	{
+		opacity: 0.5;
+		width: 800px;
+		height: 0;
+	}
+	100%
+	{
+		opacity: 1;
+		width: 800px;
+		height: 450px;
+	}
+}
+
+
+
+.divLeftRight
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	border: thick solid #fff;
+	border-color: transparent #fff transparent #fff;
+	animation: backlit infinite 1s;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes backlit
+{
+	from{
+		box-shadow: 0 0 0 0 #fff;
+	}
+	to
+	{
+		box-shadow: 0 0 10px 2px #fff;
+	}
+}
+
+
+.divTopBottom
+{
+	padding: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	height: 100%;
+}
+
+.divFormInput
+{
+	width: 80%;
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	margin-top: 5px;
+	margin-bottom: 2px;
+	font-weight: 600;
+	outline: none;
+}
+.divFormSubmit
+{
+	width: 25%;
+	padding: 10px;
+	border-radius: 25px;
+	margin-top: 50px;
+	margin-bottom: 5px;
+	font-weight: 600;
+	border: 3px solid #fff;
+	color: #fff;
+	background-color: transparent;
+}
+
+.inputBotton
+{
+	width: 80%;
+	height: 0px;
+	border: thin solid #fff;
+	margin-bottom: 5px;
+}
+
+.aboutUS
+{
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: transparent;
+	animation: rot360XYZ infinite 5s;
+	animation-direction: alternate-reverse;
+	transition: all 1s;
+}
+@keyframes rot360XYZ
+{
+	0%
+	{
+		transform: translateX(-50%) rotateY(0deg) rotateX(0deg) ;
+	}
+	25%
+	{
+		transform: translateX(-50%) rotateY(10deg) rotateX(10deg) ;
+	}
+	50%
+	{
+		transform: translateX(-50%) rotateY(-10deg) rotateX(-10deg) ;
+	}
+	75%
+	{
+		transform: translateX(-50%) rotateY(10deg) rotateX(-10deg);
+	}
+	100%
+	{
+		transform: translateX(-50%) rotateY(-10deg) rotateX(10deg) ;
+	}
+}
+
+.aboutUSLayer1
+{
+	background-color: #000;
+	opacity: 0.5;
+	box-shadow: inset 0 0 10px 5px #fff;
+	border: 10px double #fff;
+	border-color: transparent #fff transparent #fff;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	animation: rotate1 3s infinite;
+	transition: all 0.5s;
+}
+
+@keyframes rotate1
+{
+	from
+	{
+		transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	}
+	to
+	{
+		transform: translateX(-50%) translateY(-50%) rotate(360deg);
+	}
+}
+
+.aboutUSLayer2
+{
+	background: radial-gradient(#000,#555);
+	opacity: 0.25;
+	border: 5px double #fff;
+	border-color: #fff transparent #fff transparent;
+	border-radius: 50%;
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	animation: rotate1 2s infinite alternate;
+	transition: all 0.5s;
+}
+.aboutUSLayer3
+{
+	background-color: transparent;
+	border: 10px double #fff;
+	border-color: transparent #fff transparent #fff;
+	border-radius: 50%;
+	width: 60%;
+	height: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	animation: rotate1 1s infinite;
+	animation-direction: alternate-reverse;
+	transition: all 0.5s;
+}
+
+.aboutUSImage
+{
+	width: 40%;
+	height: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0.5;
+	transform: translateX(-50%) translateY(-50%);
+	transition: all .5s;
+}
+
+.aboutUSImage:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+
